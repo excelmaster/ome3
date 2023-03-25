@@ -199,12 +199,14 @@ class Auth extends \CodeIgniter\Controller
 				'type' => 'password',
 			];
 
-			// get all the enabled courses
+			/* get all the enabled courses
 			$enabledCoursesInstance = model(EnabledCoursesModel::class);
 			$enabledCourses = $enabledCoursesInstance->findAll();
 			$this->data['enabledcourses'] = $enabledCourses;
 			echo $this->viewsFolder . DIRECTORY_SEPARATOR . 'login';
+			*/
 			return $this->renderPage($this->viewsFolder . DIRECTORY_SEPARATOR . 'login', $this->data);
+
 		}
 	}
 

@@ -13,15 +13,15 @@
 
 									use PhpParser\Node\Expr\Isset_;
 
-									echo base_url('public/assets/plugins/fontawesome-free/css/all.min.css'); ?>">
+									echo base_url('resources/assets/plugins/fontawesome-free/css/all.min.css'); ?>">
 	<!-- Ionicons -->
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<!-- icheck bootstrap -->
-	<link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('resources/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css'); ?>">
 	<!-- Theme style -->
-	<link rel="stylesheet" href="<?php echo base_url('public/assets/dist/css/adminlte.min.css'); ?>">
-	<link rel="stylesheet" href="<?php echo base_url('public/assets/css/intro.css'); ?>">
-	<link rel="stylesheet" href="<?php echo base_url('public/assets/css/login.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('resources/assets/dist/css/adminlte.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('resources/assets/css/intro.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('resources/assets/css/login.css'); ?>">
 	<!-- Google Font: Source Sans Pro -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 	<!-- CSS only -->
@@ -31,10 +31,10 @@
 	</script>
 </head>
 
-<body class="hold-transition login-page" style="background-image: url('<?php echo base_url('public/img/teens/template/bcg_template.jpg'); ?>');">
+<body class="hold-transition login-page" style="background-image: url('<?php echo base_url('resources/img/teens/template/bcg_template.jpg'); ?>');">
 	<!-- video background -->
-	<!-- <video class="login-video" playsinline autoplay muted loop poster="<?php echo base_url('public/img/teens/template/bcg_template.jpg'); ?>" id="loginVideo">
-		<source src="<?php echo base_url('public/img/mdl_img/login.mp4'); ?>" type="video/mp4" style="width:900px;heigth: 500px">
+	<!-- <video class="login-video" playsinline autoplay muted loop poster="<?php echo base_url('resources/img/teens/template/bcg_template.jpg'); ?>" id="loginVideo">
+		<source src="<?php echo base_url('resources/img/mdl_img/login.mp4'); ?>" type="video/mp4" style="width:900px;heigth: 500px">
 		Your browser does not support HTML5 video.
 	</video> -->
 	<div class="container">
@@ -43,7 +43,7 @@
 				<div class="col-md-12 d-flex justify-content-center align-content-center">
 					<div class="d-flex justify-content-start align-content-center">
 						<div style="weigth:180px;heigth: 150px;">
-							<img src="<?php echo base_url('public/img/kids/template/logo_transparent.png'); ?>" alt="" class="">
+							<img src="<?php echo base_url('resources/img/kids/template/logo_transparent.png'); ?>" alt="" class="">
 						</div>
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 			<div class="row">
 				<div class="col-md-6 d-flex align-content-end justify-content-center">
 					<div style="weigth:180px;heigth: 150px;">
-						<img src="<?php echo base_url('public/img/mdl_img/quote_login.svg'); ?>" alt="" class="">
+						<img src="<?php echo base_url('resources/img/mdl_img/quote_login.svg'); ?>" alt="" class="">
 					</div>
 				</div>
 				<div class="col-md-6 d-flex align-content-start justify-content-center">
@@ -121,11 +121,11 @@
 	<!-- /.login-box -->
 
 	<!-- jQuery -->
-	<script src="<?php echo base_url('public/assets/plugins/jquery/jquery.min.js'); ?>"></script>
+	<script src="<?php echo base_url('resources/assets/plugins/jquery/jquery.min.js'); ?>"></script>
 	<!-- Bootstrap 4 -->
-	<script src="<?php echo base_url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+	<script src="<?php echo base_url('resources/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 	<!-- AdminLTE App -->
-	<script src="<?php echo base_url('public/assets/dist/js/adminlte.min.js'); ?>"></script>
+	<script src="<?php echo base_url('resources/assets/dist/js/adminlte.min.js'); ?>"></script>
 	<script>
 		$.get("https://ipinfo.io", function(response) {
 			$('#ip').val(response.ip);
