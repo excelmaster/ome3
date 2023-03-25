@@ -101,7 +101,7 @@ class Auth extends \CodeIgniter\Controller
 		if (!$this->ionAuth->loggedIn()) {
 			// redirect them to the login page
 			echo 'aqui estamos';
-			return redirect()->to('index.php/auth/login');
+			return redirect()->to('auth/login');
 		} else if (!$this->ionAuth->isAdmin()) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
