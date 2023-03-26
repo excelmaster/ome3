@@ -5,7 +5,7 @@ class Auth extends \IonAuth\Controllers\Auth
     public function index() {
         if(!$this->ionAuth->loggedIn()){
             //redirect then to the login page
-            return view('/auth/login');
+            return redirect()->to('/auth/login');
         } else {
             return view('/loginmoodle/index');
         }

@@ -1,8 +1,9 @@
 <?php
 
 namespace IonAuth\Controllers;
+
 use App\Models\MdlsessionModel;
-//use App\models\EnrolmentModel;
+use App\models\EnrolmentModel;
 
 
 /**
@@ -100,8 +101,7 @@ class Auth extends \CodeIgniter\Controller
 	{
 		if (!$this->ionAuth->loggedIn()) {
 			// redirect them to the login page
-			echo 'aqui estamos';
-			return redirect()->to('auth/login');
+			return redirect()->to('/auth/login');
 		} else if (!$this->ionAuth->isAdmin()) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
@@ -109,14 +109,6 @@ class Auth extends \CodeIgniter\Controller
 			throw new \Exception('You must be an administrator to view this page.');
 		} else {
 			$this->data['title'] = lang('Auth.index_heading');
-
-			// get all the enabled courses
-			$enabledCoursesInstance = model(EnabledCoursesModel::class);
-			$enabledCourses = $enabledCoursesInstance->findAll();
-			$this->data = [
-				'enabledCourses' => $enabledCourses,
-			];
-			echo ($this->data);
 
 			// set the flash data error message if there is one
 			$this->data['message'] = $this->validation->getErrors() ? $this->validation->listErrors($this->validationListTemplate) : $this->session->getFlashdata('message');
@@ -174,6 +166,9 @@ class Auth extends \CodeIgniter\Controller
 					// use redirects instead of loading views for compatibility with MY_Controller libraries
 					return redirect()->back()->withInput();
 				}
+
+
+				echo "es valido";
 			} else {
 				// if the login was un-successful
 				// redirect them back to the login page
@@ -199,14 +194,7 @@ class Auth extends \CodeIgniter\Controller
 				'type' => 'password',
 			];
 
-			/* get all the enabled courses
-			$enabledCoursesInstance = model(EnabledCoursesModel::class);
-			$enabledCourses = $enabledCoursesInstance->findAll();
-			$this->data['enabledcourses'] = $enabledCourses;
-			echo $this->viewsFolder . DIRECTORY_SEPARATOR . 'login';
-			*/
 			return $this->renderPage($this->viewsFolder . DIRECTORY_SEPARATOR . 'login', $this->data);
-
 		}
 	}
 
@@ -220,13 +208,14 @@ class Auth extends \CodeIgniter\Controller
 		$this->data['title'] = 'Logout';
 		//logout from moodle session
 		$mdlSession = model(MdlsessionModel::class);
-		//$numberOfSessions = $mdlSession->deleteActiveSessions($_SESSION['user_id'], $_SESSION['ipaddress']);
+		$numberOfSessions = $mdlSession->deleteActiveSessions($_SESSION['user_id'], $_SESSION['ipaddress']);
 		// log the user out
 		$this->ionAuth->logout();
 		// redirect them to the login page
 		$this->session->setFlashdata('message', $this->ionAuth->messages());
-		//echo $numberOfSessions;
+		echo $numberOfSessions;
 		return redirect()->to('/auth/login')->withCookies();
+
 	}
 
 	/**
