@@ -57,10 +57,10 @@
 				<div class="col-md-6 d-flex align-content-start justify-content-center">
 					<div class="login-box bluebox">
 						<!-- /.login-logo -->
-						<?php echo form_open('auth/login'); ?>
+						<?php echo form_open( base_url('auth/login')); ?>
 						<div class="card">
 							<div class="card-body login-card-body bg-light">
-								<p class="login-box-msg">DIGITE SUS DATOS DE INGRESO
+								<p class="login-box-msg">DIGITE SUS DATOS DE INGRESO perros
 								</p>
 								<input id="ip" name="ip" type="text" class="login-box-msg" hidden></input>
 								<div class="input-group mb-2">
