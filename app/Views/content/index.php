@@ -49,7 +49,7 @@ $colvideo = array(
         <br><br>
       </div>
       <div class="col-md-<?php echo $colvideo['e'] ?>">
-        <div class="col-sm-10 direct-chat-text bg-blue"><?php echo 'Lesson ' . $lesson . ' - Activity ' . $activity . ':: ' . $source; ?></div>
+        <div class="col-sm-10 direct-chat-text bg-blue"><?php echo 'Lección ' . $lesson . ' - Actividad ' . $activity . ':: ' . $source; ?></div>
       </div>
       <div class="col-md-<?php echo $colvideo['f'] ?>">
         <a href="<?php echo base_url('activities/' . $site . '/' . $lessonId . '/' . $course . '/' . $lesson . '/' . $courseId); ?>"><img style="height: 700;width: 580" src="<?php echo base_url('public/img/' . $site . '/content/back_activities.png'); ?>"></a>

@@ -10,17 +10,17 @@ $this->section('content');
     <div class="card-header">
         <div class="row mb-2">
             <div class="col-sm-3">
-                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.´png'); ?>" alt="">
+                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.png'); ?>" alt="">
                 
             </div>
             <div class="col-sm-7">
                 <div class="direct-chat-msg">
-                    <div class="direct-chat-text text-primary"><b> <?php echo 'WORLD ' . $course . '   >>   LESSON ' . $lesson; ?></b></div>
+                    <div class="direct-chat-text text-primary"><b> <?php echo 'CURSO ' . $course . '   >>   LECCIÓN ' . $lesson; ?></b></div>
                 </div>
-                <div class="col-sm-10 direct-chat-text bg-blue">CHOOSE THE ACTIVITY THAT YOU WANT TO STUDY!</div>
+                <div class="col-sm-10 direct-chat-text bg-blue">ELIGE LA ACTIVIDAD QUE QUIERES ESTUDIAR!</div>
             </div>
             <div class="col-sm-2">
-                <a href="<?php echo base_url('lessons/' . $site . '/' . $courseId . '/' . $course); ?>"><img src="<?php echo base_url('public/img/' . $site . '/activities/back_activities.png'); ?>"></a>
+                <a href="<?php echo base_url('lessons/' . $site . '/' . $courseId . '/' . $course); ?>"><img src="<?php echo base_url('public/img/' . $site . '/activities/back_lessons.png'); ?>"></a>
             </div>
         </div>
         <!-- <div class="card-tools">
