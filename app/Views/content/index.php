@@ -19,7 +19,7 @@ $colvideo = array(
   <div class="card-header">
     <div class="row">
       <div class="col-md-<?php echo $colvideo['a'] ?>">
-        <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.svg'); ?>" alt="" >
+        <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.png'); ?>" alt="" >
       </div>
       <!-- <div class="col-md-<?php echo $colvideo['b'] ?>">
         <?php
@@ -52,7 +52,7 @@ $colvideo = array(
         <div class="col-sm-10 direct-chat-text bg-blue"><?php echo 'Lesson ' . $lesson . ' - Activity ' . $activity . ':: ' . $source; ?></div>
       </div>
       <div class="col-md-<?php echo $colvideo['f'] ?>">
-        <a href="<?php echo base_url('activities/' . $site . '/' . $lessonId . '/' . $course . '/' . $lesson . '/' . $courseId); ?>"><img style="height: 700;width: 580" src="<?php echo base_url('public/img/' . $site . '/content/back_activities.svg'); ?>"></a>
+        <a href="<?php echo base_url('activities/' . $site . '/' . $lessonId . '/' . $course . '/' . $lesson . '/' . $courseId); ?>"><img style="height: 700;width: 580" src="<?php echo base_url('public/img/' . $site . '/content/back_activities.png'); ?>"></a>
       </div>
     </div>
   </div>

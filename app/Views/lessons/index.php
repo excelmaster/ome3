@@ -11,7 +11,7 @@ $this->section('content');
     <div class="card-header">
         <div class="row mb-2">
             <div class="col-sm-4">
-                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.svg'); ?>" alt="">
+                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.png'); ?>" alt="">
             </div>
             <div class="col-sm-2">
                 <div class="col-sm-10 direct-chat-text bg-blue">
@@ -19,7 +19,7 @@ $this->section('content');
                 </div>
             </div>
             <div class="col-sm-6">
-                <a href="<?php echo base_url('courses/' . $site); ?>"><img src="<?php echo base_url('public/img/' . $site . '/lessons/back_button.svg'); ?>"></a>
+                <a href="<?php echo base_url('courses/' . $site); ?>"><img src="<?php echo base_url('public/img/' . $site . '/lessons/back_button.png'); ?>"></a>
             </div>
         </div>
     </div>

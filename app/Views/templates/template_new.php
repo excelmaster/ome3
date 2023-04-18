@@ -53,19 +53,19 @@
     </div>
     <div class="menu">
         <?php $clase = ($site == 'teens') ? 'rounded float-left' : ''; ?>
-        <div class="mn_4">
-            <a href="<?php echo base_url('pdfs/' . $site); ?>">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_1.svg'); ?>"
-                    class="img-menu <?php echo $clase; ?>">
-            </a>
-        </div>
-        <div class="mn_1">
-            <a href="<?php echo base_url('dict/' . $site);  ?>">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_2.svg'); ?>"
-                    class="img-menu <?php echo $clase; ?>">
-            </a>
-        </div>
         <div class="mn_2">
+            <a href="<?php echo base_url('pdfs/' . $site); ?>">
+                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_1.png'); ?>"
+                    class="img-menu <?php echo $clase; ?>">
+            </a>
+        </div>
+        <div class="mn_3">
+            <a href="<?php echo base_url('dict/' . $site);  ?>">
+                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_2.png'); ?>"
+                    class="img-menu <?php echo $clase; ?>">
+            </a>
+        </div>
+        <!-- <div class="mn_2">
             <a href="<?php echo base_url('music/' . $site);  ?>">
                 <img src="<?php echo base_url('public/img/' . $site . '/template/menu_3.svg'); ?>"
                     class="img-menu <?php echo $clase; ?>">
@@ -77,44 +77,44 @@
                 <img src="<?php echo base_url('public/img/' . $site . '/template/menu_4.svg'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
-        </div>
-        <div class="mn_6">
+        </div> -->
+        <div class="mn_1">
             <a href="<?php echo base_url('tutorial/' . $site);  ?>">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_6.svg'); ?>"
+                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_6.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
     </div>
     <div class="sidebar">
-        <div class="sb_1">
+        <div class="sb_6">
             <a href="#" data-toggle="tooltip" data-placement="right"
                 title="MUY PRONTO PODRÁS DESCARGAR TU CERTIFICADO DE PARTICIPACIÓN EN NUESTRO CURSO!">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/certificado.svg'); ?>"
+                <img src="<?php echo base_url('public/img/' . $site . '/template/certificado.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div class="sb_2">
+        <!-- <div class="sb_2">
             <a href="https://api.whatsapp.com/send/?phone=573228315698&text=Quiero+informacion+sobre+las+clases+personalizadas&app_absent=0"
                 target="_blank" data-toggle="tooltip" data-placement="left" title="CLASES PERSONALIZADAS !">
                 <img src="<?php echo base_url('public/img/' . $site . '/template/clases.svg'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
-        </div>
-        <div class="sb_3">
+        </div> -->
+        <div class="sb_2">
             <a href="<?php echo base_url('faq/' . $site); ?>">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/faq.svg'); ?>"
+                <img src="<?php echo base_url('public/img/' . $site . '/template/faq.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div class="sb_4">
+        <div class="sb_3">
             <a href="https://api.whatsapp.com/send/?phone=573228315698&text=Necesito+soporte+de+la+plataforma&app_absent=0"
                 target="blank_">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/support.svg'); ?>"
+                <img src="<?php echo base_url('public/img/' . $site . '/template/support.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
         <div class="sb_5 d-flex justify-content-center" onclick="sonido()" data-placement="left" data-toggle="tooltip">
-            <img src="<?php echo base_url('public/img/' . $site . '/template/volume_off.svg'); ?>" id="volume"
+            <img src="<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>" id="volume"
                 class="btn-sonido" style="width: 70px; height: 70px;  ">
             <audio id="myAudio" allowfullscreen>
                 <source src="<?php echo base_url('public/sound/' . $site . '/sound_body_rdc.mp3'); ?>"
@@ -183,14 +183,14 @@
 
             if (localStorage.getItem("muted")) {
                 icono.setAttribute("src",
-                    "<?php echo base_url('public/img/' . $site . '/template/volume_off.svg'); ?>");
+                    "<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>");
                 myAudio.volume = .1;
                 myAudio.play();
                 myAudio.loop = false;
                 localStorage.removeItem("muted");
             } else {
                 localStorage.setItem("muted", "on");
-                icono.setAttribute("src", "<?php echo base_url('public/img/' . $site . '/template/volume_on.svg'); ?>");
+                icono.setAttribute("src", "<?php echo base_url('public/img/' . $site . '/template/volume_on.png'); ?>");
                 myAudio.pause();
             }
         }

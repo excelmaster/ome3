@@ -10,7 +10,7 @@ $this->section('content');
     <div class="card-header">
         <div class="row mb-2">
             <div class="col-sm-3">
-                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.svg'); ?>" alt="">
+                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.´png'); ?>" alt="">
                 
             </div>
             <div class="col-sm-7">
@@ -20,7 +20,7 @@ $this->section('content');
                 <div class="col-sm-10 direct-chat-text bg-blue">CHOOSE THE ACTIVITY THAT YOU WANT TO STUDY!</div>
             </div>
             <div class="col-sm-2">
-                <a href="<?php echo base_url('lessons/' . $site . '/' . $courseId . '/' . $course); ?>"><img src="<?php echo base_url('public/img/' . $site . '/activities/back_lessons.svg'); ?>"></a>
+                <a href="<?php echo base_url('lessons/' . $site . '/' . $courseId . '/' . $course); ?>"><img src="<?php echo base_url('public/img/' . $site . '/activities/back_activities.png'); ?>"></a>
             </div>
         </div>
         <!-- <div class="card-tools">
@@ -39,7 +39,7 @@ $this->section('content');
             ?>
                 <div class="col-sm-4">
                     <div class="card text-blue bg-transparent">
-                        <h5 class="text-center">Activity <?php echo $c['activityNumber']; ?></h5>
+                        <h5 class="text-center">Actividad <?php echo $c['activityNumber']; ?></h5>
                         <img class="card-img-top bg-transparent" src="holder.js/100px180/" alt="">
                         <form action="contenido.html" method="post"></form>
                         <?php

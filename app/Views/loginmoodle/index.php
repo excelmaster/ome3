@@ -22,7 +22,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
-<body class="hold-transition login-page" style="background-image: url('<?php echo base_url('public/img/teens/template/bcg_template.jpg'); ?>');">
+<body class="hold-transition login-page" style="background-image: url('<?php echo base_url('public/img/ofim/template/bcg_template.jpg'); ?>');">
 	<div class="container">
 		<div class="container-fluid">
 			<div class="row">
