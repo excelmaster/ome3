@@ -11,13 +11,13 @@ $this->section('content');
     <div class="card-header">
         <div class="row mb-12">
             <div class="col-sm-5">
-                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos.gif'); ?>" alt="">
+                <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos.png'); ?>" alt="">
             </div>
             <div class="col-sm-5">
                 <div class="col-sm-10 direct-chat-text bg-blue">Choose the letter that you want to meet!</div>
             </div>
             <div class="col-sm-2">
-                <a href="<?php echo base_url('courses/' . $site); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/volver_mundos.gif') ?>"></a>
+                <a href="<?php echo base_url('courses/' . $site); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/back_button.png') ?>"></a>
             </div>
         </div>
         <!-- <div class="card-tools">
