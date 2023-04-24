@@ -18,7 +18,7 @@ $this->section('content');
                 <div class="col-sm-10 direct-chat-text bg-blue">En estos videos puedes ver como usar nuestra plataforma!</div>
             </div>
             <div class="col-sm-2">
-                <a href="<?php echo base_url('courses/' . $site ); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/volver_mundos.gif'); ?>"></a>
+                <a href="<?php echo base_url('courses/' . $site ); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/back_button.png'); ?>"></a>
             </div>
         </div>
         <!-- <div class="card-tools">

@@ -6,9 +6,9 @@ $this->extend('templates/template_new');
 $this->section('content');
 $colvideo = array(
   'a' => 4,
-  'b' => 5,
+  'b' => 4,
   'c' => 2,
-  'd' => 1
+  'd' => 2
 );
 ?>
 
@@ -32,7 +32,7 @@ $colvideo = array(
         <div class="col-sm-10 direct-chat-text bg-blue"><?php echo 'Platform Tutorial ' . $activity ; ?></div>
       </div>
       <div class="col-md-<?php echo $colvideo['d'] ?>">
-        <a href="<?php echo base_url('tutorial/' . $site ); ?>"><img style="height: 700;width: 580" src="<?php echo base_url('public/img/' . $site . '/content/volver_actividad.gif'); ?>"></a>
+        <a href="<?php echo base_url('tutorial/' . $site ); ?>"><img style="height: 700;width: 580" src="<?php echo base_url('public/img/' . $site . '/content/back_activities.png'); ?>"></a>
       </div>
     </div>
   </div>

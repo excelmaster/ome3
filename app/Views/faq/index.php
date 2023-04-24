@@ -17,7 +17,7 @@ $this->section('content');
                 <div class="col-sm-10 direct-chat-text bg-blue">Dé clic en la pregunta para ver la respuesta!</div>
             </div>
             <div class="col-sm-2">
-                <a href="<?php echo base_url('courses/' . $site); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/volver_mundos.gif'); ?>"></a>
+                <a href="<?php echo base_url('courses/' . $site); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/back_button.png'); ?>"></a>
             </div>
         </div>
 
