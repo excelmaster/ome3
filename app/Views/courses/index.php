@@ -40,7 +40,7 @@ $this->section('content');
                 </div>
             </div>
             <div class="col-sm-2">
-                <img class="img-fluid img-bnvd" src="<?php echo base_url('public/img/' . $site . '/template/mensaje_mundo.svg'); ?>" alt="">
+                <img class="img-fluid img-bnvd" src="<?php echo base_url('public/img/' . $site . '/template/mensaje_mundo.svg'); ?>" alt="" hidden>
             </div>
         </div>
     </div>
@@ -51,7 +51,8 @@ $this->section('content');
             ?>
                 <div class="col-sm-3">
                     <div class="card text-blue bg-transparent">
-                        <h5 class="text-center">World <!-- <?php echo $c['mundo']; ?> --></h5>
+                        <!-- <h5 class="text-center">World <?php echo $c['mundo']; ?> </h5> -->
+                        <img src="<?php echo base_url('public/img/' . $site . '/courses/title.png'); ?>" alt="" srcset="" class="img-mundos -center" style="heigth: 50px;width: 120px;text-align: center">
                         <a href="<?php echo base_url('lessons/' . $site . '/' . $c['id'] . '/' . $c['mundo']); ?>">
                             <img src="<?php echo base_url('public/img/' . $site . '/courses/mundos' . $c['mundo']  . '.png'); ?>" alt="" class="img-fluid img-mundos" style="width: 80%;">
                         </a>
@@ -65,7 +66,8 @@ $this->section('content');
             for ($i = $activos; $i < 8; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="card text-blue bg-transparent">
-                        <h5 class="text-center">World <?php echo $inactivos; ?></h5>
+                        <!-- <h5 class="text-center">World <?php echo $inactivos; ?></h5> -->
+                        <img src="<?php echo base_url('public/img/' . $site . '/courses/title.png'); ?>" alt="" srcset="" class="img-mundos fichas" style="heigth: 50px;width: 120px;text-align: center" >
                         <a href="#">
                             <img src="<?php echo base_url('public/img/' . $site . '/courses/mundos' . ($i + 1) . '.png'); ?>" alt="" class="card-fluid fichas img-mundos" style="width:100%">
                         </a>
