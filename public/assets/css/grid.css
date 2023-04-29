@@ -207,7 +207,7 @@ body {
     z-index: 1;
     grid-template:
       "logo marca  usuario"100px 100px auto;
-    background-color: rgba(237, 218, 237, 0.40);
+    background-color: rgba(184, 250, 255, 0.16);
     background-size: cover;
     background-attachment: fixed;
   }

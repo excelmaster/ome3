@@ -5,7 +5,6 @@ $inactivos = 0;
 $this->extend('templates/template_new', $site);
 $this->section('content');
 ?>
-
 <!-- Default box -->
 <div class="card bg-transparent">
     <div class="card-header">

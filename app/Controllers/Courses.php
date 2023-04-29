@@ -12,7 +12,7 @@ class Courses extends BaseController
 			$courseInstance = new CourseModel($db);
 			$courses = $courseInstance->like('idnumber',$site,'after')->findAll();
 			$courses = array('courses'=>$courses, 'courseId'=>'1', 'site' => $site);
-			echo $_SESSION['user_id'];
+			//echo $_SESSION['user_id'];
 			return view('courses/index',$courses);
 		} else { 
 			$this->session->setFlashdata('message', 'No se encuentra logueado en el sistema');
