@@ -108,10 +108,15 @@ body {
   animation-duration: 2s;
 }
 
-.img-mundos {
-  animation: flipInX;
-  animation-duration: 3s;
+/* .img-mundos {
+  animation: fadeInBottomLeft;
+  animation-duration: 1s;
+  animation-delay: 0.3s
   transition: scale(.7) 1s;
+} */
+
+.mundo-card:hover {
+  background-color: blueviolet;
 }
 
 .card:hover {
@@ -234,58 +239,65 @@ body {
   }
 
   .mn_1 {
-    animation: bounceInUp;
-    animation-duration: 2s;
+    animation: tada;
+    animation-duration: 4s;
   }
 
   .mn_2 {
-    animation: bounceInUp;
-    animation-duration: 2.5s;
+    animation: tada;
+    animation-duration: 3.5s;
   }
 
   .mn_3 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 3s;
   }
 
   .mn_4 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 3.5s;
   }
 
   .mn_5 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 4s;
   }
 
   .mn_6 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 4s;
   }
 
   .sb_1 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 2s;
   }
 
   .sb_2 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 2.5s;
   }
 
   .sb_3 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 3s;
   }
 
   .sb_4 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 3.5s;
   }
   
   .sb_5 {
-    animation: bounceInUp;
+    animation: tada;
     animation-duration: 4s;
+  }
+
+  .mundo-card:hover {
+    animation: headShake;
+    animation-duration: 2s;
+    border-color: rgb(180, 92, 10);
+    border-width: 2px;
   }
 
   .content {

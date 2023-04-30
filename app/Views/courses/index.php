@@ -49,7 +49,7 @@ $this->section('content');
             foreach ($courses as $c) {
             ?>
                 <div class="col-sm-3">
-                    <div class="card text-blue bg-transparent">
+                    <div class="card text-blue bg-transparent mundo-card">
                         <!-- <h5 class="text-center">World <?php echo $c['mundo']; ?> </h5> -->
                         <img src="<?php echo base_url('public/img/' . $site . '/courses/title.png'); ?>" alt="" srcset="" class="img-mundos -center" style="heigth: 50px;width: 120px;text-align: center">
                         <a href="<?php echo base_url('lessons/' . $site . '/' . $c['id'] . '/' . $c['mundo']); ?>">
@@ -64,11 +64,11 @@ $this->section('content');
 
             for ($i = $activos; $i < 8; $i++) { ?>
                 <div class="col-sm-3">
-                    <div class="card text-blue bg-transparent">
+                    <div class="card text-blue bg-transparent mundo-card">
                         <!-- <h5 class="text-center">World <?php echo $inactivos; ?></h5> -->
                         <img src="<?php echo base_url('public/img/' . $site . '/courses/title.png'); ?>" alt="" srcset="" class="img-mundos fichas" style="heigth: 50px;width: 120px;text-align: center" >
                         <a href="#">
-                            <img src="<?php echo base_url('public/img/' . $site . '/courses/mundos' . ($i + 1) . '.png'); ?>" alt="" class="card-fluid fichas img-mundos" style="width:100%">
+                            <img src="<?php echo base_url('public/img/' . $site . '/courses/mundos' . ($i + 1) . '.png'); ?>" alt="" class="card-fluid fichas img-mundos" style="width:80%">
                         </a>
                     </div>
                 </div>

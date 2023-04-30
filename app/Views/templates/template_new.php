@@ -86,34 +86,34 @@
         </div>
     </div>
     <div class="sidebar">
-        <div class="sb_6">
+        <div class="sb_2">
             <a href="#" data-toggle="tooltip" data-placement="right"
                 title="MUY PRONTO PODRÁS DESCARGAR TU CERTIFICADO DE PARTICIPACIÓN EN NUESTRO CURSO!">
                 <img src="<?php echo base_url('public/img/' . $site . '/template/certificado.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <!-- <div class="sb_2">
+        <!-- <div class="sb_3">
             <a href="https://api.whatsapp.com/send/?phone=573228315698&text=Quiero+informacion+sobre+las+clases+personalizadas&app_absent=0"
                 target="_blank" data-toggle="tooltip" data-placement="left" title="CLASES PERSONALIZADAS !">
                 <img src="<?php echo base_url('public/img/' . $site . '/template/clases.svg'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div> -->
-        <div class="sb_2">
+        <div class="sb_3">
             <a href="<?php echo base_url('faq/' . $site); ?>">
                 <img src="<?php echo base_url('public/img/' . $site . '/template/faq.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div class="sb_3">
+        <div class="sb_4">
             <a href="https://api.whatsapp.com/send/?phone=573228315698&text=Necesito+soporte+de+la+plataforma&app_absent=0"
                 target="blank_">
                 <img src="<?php echo base_url('public/img/' . $site . '/template/support.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div class="sb_5 d-flex justify-content-center" onclick="sonido()" data-placement="left" data-toggle="tooltip">
+        <div class="sb_1 d-flex justify-content-center" onclick="sonido()" data-placement="left" data-toggle="tooltip">
             <img src="<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>" id="volume"
                 class="btn-sonido" style="width: 70px; height: 70px;  ">
             <audio id="myAudio" allowfullscreen>
