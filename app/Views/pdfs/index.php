@@ -13,9 +13,9 @@ $this->section('content');
             </div>
             <div class="col-sm-5">
                 <div class="direct-chat-msg">
-                    <div class="direct-chat-text text-primary"><b> PDF ACTIVITY</b></div>
+                    <div class="direct-chat-text text-primary"><b> ACTIVIDADES EN PDF</b></div>
                 </div>
-                <div class="col-sm-10 direct-chat-text bg-blue">CHOOSE THE COLOR ACTIVITY THAT YOU WANT TO DO!</div>
+                <div class="col-sm-10 direct-chat-text bg-blue">EN ESTOS PDF ENCONTRARAS MULTIPLES ACTIVIDADES PARA REFORZAR TUS CONOCIMIENTOS!</div>
             </div>
             <div class="col-sm-2">
                 <a href="<?php echo base_url('courses/' . $site ); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/back_button.png'); ?>"></a>
