@@ -29,4 +29,9 @@ class PdfModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    function showPDFByCourse($course){
+        return $this->like('categoria',$course,'after')->orderBy('course_id, lesson','asc')->findAll();
+    }
 }
+

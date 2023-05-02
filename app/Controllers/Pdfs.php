@@ -10,7 +10,7 @@ class Pdfs extends BaseController
 	{
 		if ($_SESSION['logged'] == 1) {
 			$PdfInstance = new PdfModel($db);
-			$pdfs = $PdfInstance->where('categoria', 'pdf_' . $site)->orderBy('activityNumber', 'ASC')->findAll();
+			$pdfs = $PdfInstance->showPDFByCourse($_SESSION['course']);
 			$pdfs = array(
 				'items' => $pdfs,
 				'site' => $site
