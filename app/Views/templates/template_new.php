@@ -113,7 +113,7 @@
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div class="sb_1 d-flex justify-content-center" onclick="sonido()" data-placement="left" data-toggle="tooltip">
+        <div id="soundDivision" class="sb_1 d-flex justify-content-center" onclick="sonido()" data-placement="left" data-toggle="tooltip">
             <img src="<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>" id="volume"
                 class="btn-sonido" style="width: 70px; height: 70px;  ">
             <audio id="myAudio" allowfullscreen>
@@ -180,6 +180,7 @@
 
         function sonido() {
             let ck = document.cookie;
+            localStorage.setItem("muted", "on");
 
             if (localStorage.getItem("muted")) {
                 icono.setAttribute("src",
@@ -195,8 +196,10 @@
             }
         }
 
-        var element = document.querySelector("body");
+        //
+        //var element = document.querySelector("body");
         //element.requestFullscreen();
+        document.getElementById("soundDivision").clic
     </script>
 
 </body>
