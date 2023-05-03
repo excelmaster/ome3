@@ -28,7 +28,7 @@ $this->section('content');
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-3 mundo-card">                   
+                <div class="col-sm-3 lesson-card">                   
                     <div style="padding:20px"> 
                         <p class="ome-title h5"><?php echo $c['descripcion'] ?></p>                      
                         <a type="button" href="<?php echo base_url('activities/' . $site . '/' . $c['id'] . '/' . $course . '/' . $c['lesson_number'] . '/' . $courseId); ?>">

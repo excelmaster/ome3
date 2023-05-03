@@ -26,13 +26,13 @@ $('[class*="img-mundos"]').mouseleave(function(e){
 })
 
 // Lessons
-$('[class*="img-lesson"]').mouseover(function(e){
+$('[class*="lesson-card"]').mouseover(function(e){
     //instance element
     contentAudio.volume = 0.2
     contentAudio.play()    
 })
 
-$('[class*="img-lesson"]').mouseleave(function(e){
+$('[class*="lesson-card"]').mouseleave(function(e){
     //instance element
     contentAudio.pause() 
     contentAudio.currentTime = 0   
