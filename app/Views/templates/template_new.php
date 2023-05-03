@@ -121,6 +121,16 @@
                     type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio><br>
+            <audio id="menuAudio" allowfullscreen>
+                <source src="<?php echo base_url('public/sound/' . $site . '/sound_menu.mp3'); ?>"
+                    type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio><br>
+            <audio id="contentAudio" allowfullscreen>
+                <source src="<?php echo base_url('public/sound/' . $site . '/sound_content.mp3'); ?>"
+                    type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio><br>
         </div>
     </div>
     <div class="content">
@@ -166,7 +176,8 @@
     <script src="<?php echo base_url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url('public/assets/dist/js/demo.js'); ?>"></script>
-
+    <!-- JS Sound interaction -->
+    <script src="<?php echo base_url('public/assets/sound/js/ome_sound.js'); ?>"></script>
     <script>
         function openNav() {
             document.getElementById("mySidepanel").style.width = "330px";

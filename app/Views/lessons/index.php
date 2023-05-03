@@ -28,7 +28,7 @@ $this->section('content');
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-3">
+                <div class="col-sm-3 img-lesson">
                     <!-- <div class="card text-blue bg-transparent">
                         <h5 class="text-center text-blue">LESSON </h5>
                         <img class="card-img-top" src="holder.js/100px180/" alt="">

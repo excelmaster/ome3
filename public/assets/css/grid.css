@@ -300,6 +300,13 @@ body {
     border-width: 2px;
   }
 
+  .img-lesson:hover {
+    animation: headShake;
+    animation-duration: 2s;
+    border-color: rgb(180, 92, 10);
+    border-width: 2px;
+  }
+
   .content {
     display: grid;
     grid-area: content;
