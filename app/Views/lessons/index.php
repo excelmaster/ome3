@@ -28,16 +28,9 @@ $this->section('content');
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-3 img-lesson">
-                    <!-- <div class="card text-blue bg-transparent">
-                        <h5 class="text-center text-blue">LESSON </h5>
-                        <img class="card-img-top" src="holder.js/100px180/" alt="">
-                        <a type="button" href="<?php echo base_url('activities/' . $site . '/' . $c['id'] . '/' . $course . '/' . $c['lesson_number'] . '/' . $courseId); ?>">
-                            <picture src="<?php echo base_url('public/img/' . $site . '/lessons/' . $c['img_url']); ?>" alt="" class="img-fluid rounded"></picture>
-                        </a>
-                    </div> -->
+                <div class="col-sm-3 mundo-card">                   
                     <div style="padding:20px"> 
-                        <img src="<?php echo base_url('public/img/' . $site . '/lessons/title_lessons.png'); ?>" style="width:100px; height: 35px;">                       
+                        <p class="ome-title h5"><?php echo $c['descripcion'] ?></p>                      
                         <a type="button" href="<?php echo base_url('activities/' . $site . '/' . $c['id'] . '/' . $course . '/' . $c['lesson_number'] . '/' . $courseId); ?>">
                             <img src="<?php echo base_url('public/img/' . $site . '/lessons/' . $c['img_url']); ?>" alt="" class="img-fluid rounded">
                         </a>
