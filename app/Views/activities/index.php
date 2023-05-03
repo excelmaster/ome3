@@ -15,9 +15,9 @@ $this->section('content');
             </div>
             <div class="col-sm-7">
                 <div class="direct-chat-msg">
-                    <div class="direct-chat-text text-primary"><b> <?php echo 'CURSO ' . $course . '   >>   LECCIÓN ' . $lesson; ?></b></div>
+                    <p class="direct-chat-text text-primary h5"><b> <?php echo 'CURSO ' . $course . '   >>   LECCIÓN ' . $lesson; ?></b></p>
                 </div>
-                <div class="col-sm-10 direct-chat-text bg-blue">ELIGE LA ACTIVIDAD QUE QUIERES ESTUDIAR!</div>
+                <p class="col-sm-10 direct-chat-text bg-blue">ELIGE LA ACTIVIDAD QUE QUIERES ESTUDIAR!</p>
             </div>
             <div class="col-sm-2">
                 <a href="<?php echo base_url('lessons/' . $site . '/' . $courseId . '/' . $course); ?>"><img src="<?php echo base_url('public/img/' . $site . '/activities/back_lessons.png'); ?>"></a>
@@ -39,7 +39,7 @@ $this->section('content');
             ?>
                 <div class="col-sm-4">
                     <div class="card text-blue bg-transparent activity-card">
-                        <h5 class="text-center">Actividad <?php echo $c['activityNumber']; ?></h5>
+                        <p class="text-center h5">Actividad <?php echo $c['activityNumber']; ?></p>
                         <img class="card-img-top bg-transparent" src="holder.js/100px180/" alt="">
                         <form action="contenido.html" method="post"></form>
                         <?php
