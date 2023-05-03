@@ -12,7 +12,7 @@ $this->section('content');
             <div class="col-sm-4">
                 <img class="img-fluid img-bnvd" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos.png'); ?>" alt="">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-2">
                 <div class="row" hidden>
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-primary"><i>jshdf</i></button>
@@ -38,8 +38,8 @@ $this->section('content');
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <img class="img-fluid img-bnvd" src="<?php echo base_url('public/img/' . $site . '/template/mensaje_mundo.svg'); ?>" alt="" hidden>
+            <div class="col-sm-6">
+                <p class="h3 ome-title">Aquí tienes tus cursos, empecemos!</p>
             </div>
         </div>
     </div>

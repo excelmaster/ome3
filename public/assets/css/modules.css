@@ -92,8 +92,6 @@
     transition: 0.3s;
   }
   
- 
- 
   .openbtn {
     font-size: 15px;
     cursor: pointer;
@@ -103,9 +101,6 @@
     border-color: transparent;
   }
   
- 
-  
-
   .card {
     background-color: rgb(255, 94, 0);
     padding-top: 5px;
