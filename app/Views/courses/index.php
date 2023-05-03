@@ -62,7 +62,7 @@ $this->section('content');
             }
             $inactivos = $activos + 1;
 
-            for ($i = $activos; $i < 8; $i++) { ?>
+            for ($i = $activos; $i < 12; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="card text-blue bg-transparent mundo-card">
                         <!-- <h5 class="text-center">World <?php echo $inactivos; ?></h5> -->
