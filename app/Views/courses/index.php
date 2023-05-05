@@ -44,7 +44,7 @@ $this->section('content');
         </div>
     </div>
     <div class="card-body">
-        <div class="row course-container">
+        <div class="row content-container">
             <?php
             foreach ($courses as $c) {
             ?>

@@ -30,7 +30,7 @@ body {
   object-fit: cover;
 }
 
-.course-container{
+.content-container{
   display: flex;
   margin: 1px;
   flex-direction: row;
