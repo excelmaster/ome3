@@ -1,8 +1,8 @@
-* {
+/* * {
   box-sizing: border-box;
-  margin: 1px;
+  margin: 0px;
   padding: 0;
-}
+}*/
 
 p{
   font-family: 'Montserrat', sans-serif;
@@ -31,7 +31,14 @@ body {
 }
 
 .course-container{
-  justify-content: space-around;
+  display: flex;
+  margin: 1px;
+  flex-direction: row;
+  margin: -10px;
+  flex-wrap: wrap;
+  grid-row-gap: 8px;
+  grid-column-gap: 5px;
+  justify-content: space-evenly;
 }
 
 .grid-container>* {
