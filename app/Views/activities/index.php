@@ -33,11 +33,11 @@ $this->section('content');
         </div> -->
     </div>
     <div class="card-body bg-transparent">
-        <div class="row">
+        <div class="row  content-container">
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="card text-blue bg-transparent activity-card">
                         <p class="text-center h5">Actividad <?php echo $c['activityNumber']; ?></p>
                         <img class="card-img-top bg-transparent" src="holder.js/100px180/" alt="">

@@ -24,7 +24,7 @@ $this->section('content');
         </div>
     </div>
     <div class="card-body">
-        <div class="row">
+        <div class="row  content-container">
             <?php
             foreach ($lessons as $c) {
             ?>
