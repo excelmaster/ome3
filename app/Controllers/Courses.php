@@ -10,7 +10,7 @@ class Courses extends BaseController
 	{
 		if($_SESSION['logged']==1){
 			$courseInstance = new CourseModel($db);
-			$courses = $courseInstance->like('idnumber',$site,'after')->orderby('mundo','ASC')->findAll();
+			$courses = $courseInstance->like('idnumber',$site,'after')->orderby('mundo','ASC')->withDeleted()->findAll();
 			$courses = array('courses'=>$courses, 'courseId'=>'1', 'site' => $site);
 			//echo $_SESSION['user_id'];
 			return view('courses/index',$courses);

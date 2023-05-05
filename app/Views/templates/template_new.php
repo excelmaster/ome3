@@ -6,16 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> OME courses</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/fontawesome-free/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/modules.css'); ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/grid.css'); ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -23,6 +13,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/fontawesome-free/css/all.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/modules.css'); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/grid.css'); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- bootstrapTour -->
+    <link href="bootstrap-tour.min.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body class="grid-container"
@@ -41,17 +44,17 @@
         <div class="container-fluid">
             <div class="d-flex bd-highlight justify-content-between align-content-center mb-3">
                 <div class="p-2 bd-highlight">
-                    <a href="<?php echo base_url('courses/' . $site); ?>" >
+                    <a href="<?php echo base_url('courses/' . $site); ?>">
                         <img src="<?php echo base_url('public/img/' . $site . '/template/texto_logo.png'); ?>"
                             alt="AdminLTE Logo" class="logo-header">
                     </a>
                 </div>
-                <div class="p-2 bd-highlight">
-                    <a href="<?php echo base_url('auth/logout'); ?>" >
-                        <img src="<?php echo base_url('public/img/mdl_img/logout.svg'); ?>"
-                            alt="Logout" class="logo-header">
+                <div class="p-2 bd-highlight" id="logo">
+                    <a href="<?php echo base_url('auth/logout'); ?>">
+                        <img src="<?php echo base_url('public/img/mdl_img/logout.svg'); ?>" alt="Logout"
+                            class="logo-header">
                     </a>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -117,7 +120,8 @@
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div id="soundDivision" class="sb_1 d-flex justify-content-center" onclick="sonido()" data-placement="left" data-toggle="tooltip">
+        <div id="soundDivision" class="sb_1 d-flex justify-content-center" onclick="sonido()" data-placement="left"
+            data-toggle="tooltip">
             <img src="<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>" id="volume"
                 class="btn-sonido" style="width: 70px; height: 70px;  ">
             <audio id="myAudio" allowfullscreen>
@@ -126,13 +130,11 @@
                 Your browser does not support the audio element.
             </audio><br>
             <audio id="menuAudio" allowfullscreen>
-                <source src="<?php echo base_url('public/sound/' . $site . '/sound_menu.mp3'); ?>"
-                    type="audio/mpeg">
+                <source src="<?php echo base_url('public/sound/' . $site . '/sound_menu.mp3'); ?>" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio><br>
             <audio id="contentAudio" allowfullscreen>
-                <source src="<?php echo base_url('public/sound/' . $site . '/sound_content.mp3'); ?>"
-                    type="audio/mpeg">
+                <source src="<?php echo base_url('public/sound/' . $site . '/sound_content.mp3'); ?>" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio><br>
         </div>
@@ -174,14 +176,42 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="tourVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+
+
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                    </button>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe width="1020" height="630" src="https://www.youtube.com/embed/eO_AbwpYtAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery -->
     <script src="<?php echo base_url('public/assets/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- Bootstrap 4 -->
-    <script src="<?php echo base_url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?php echo base_url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>">
+    </script>
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url('public/assets/dist/js/demo.js'); ?>"></script>
     <!-- JS Sound interaction -->
     <script src="<?php echo base_url('public/assets/sound/js/ome_sound.js'); ?>"></script>
+    <!-- Bootstrap tour -->
+    <script src="<?php echo base_url('public/assets/tour/js/bootstrap-tour.min.js'); ?>"></script>
+    <!-- Bootstrap tour logic -->
+    <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>"></script>
+
     <script>
         function openNav() {
             document.getElementById("mySidepanel").style.width = "330px";
@@ -215,6 +245,10 @@
         //var element = document.querySelector("body");
         //element.requestFullscreen();
         document.getElementById("soundDivision").clic
+
+$(window).on('load', function () {
+            $('#tourVideo').modal('show');
+        })
     </script>
 
 </body>

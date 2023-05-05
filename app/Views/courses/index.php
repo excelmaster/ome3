@@ -44,16 +44,16 @@ $this->section('content');
         </div>
     </div>
     <div class="card-body">
-        <div class="row">
+        <div class="row course-container">
             <?php
             foreach ($courses as $c) {
             ?>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <div class="card text-blue bg-transparent mundo-card">
                         <!-- <h5 class="text-center">World <?php echo $c['mundo']; ?> </h5> -->
                         <img src="<?php echo base_url('public/img/' . $site . '/courses/title.png'); ?>" alt="" srcset="" class="img-mundos -center" style="heigth: 50px;width: 120px;text-align: center">
                         <a href="<?php echo base_url('lessons/' . $site . '/' . $c['id'] . '/' . $c['mundo']); ?>">
-                            <img src="<?php echo base_url('public/img/' . $site . '/courses/mundos' . $c['mundo']  . '.png'); ?>" alt="" class="img-fluid img-mundos" style="width: 80%;">
+                            <img src="<?php echo base_url('public/img/' . $site . '/courses/' . $c['img'] ); ?>" alt="" class="img-fluid img-mundos" style="width: 80%;">
                         </a>
                     </div>
                 </div>
@@ -62,13 +62,13 @@ $this->section('content');
             }
             $inactivos = $activos + 1;
 
-            for ($i = $activos; $i < 12; $i++) { ?>
+            for ($i = $activos; $i < 15; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="card text-blue bg-transparent mundo-card">
                         <!-- <h5 class="text-center">World <?php echo $inactivos; ?></h5> -->
                         <img src="<?php echo base_url('public/img/' . $site . '/courses/title.png'); ?>" alt="" srcset="" class="img-mundos fichas" style="heigth: 50px;width: 120px;text-align: center" >
                         <a href="#">
-                            <img src="<?php echo base_url('public/img/' . $site . '/courses/mundos' . ($i + 1) . '.png'); ?>" alt="" class="card-fluid fichas img-mundos" style="width:80%">
+                            <img src="<?php echo base_url('public/img/' . $site . '/courses/'.$c['img']); ?>" alt="" class="card-fluid fichas img-mundos" style="width:80%">
                         </a>
                     </div>
                 </div>
