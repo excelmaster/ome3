@@ -14,7 +14,11 @@
       "src_8"
       "src_9"
       "src_10";
-      
+    
+  }
+
+  .grid-container{
+    background-image: url(<?php echo base_url('public/img/' . $site . '/template/bcg_template.jpg'); ?>);   
   }
 
   .fichas {

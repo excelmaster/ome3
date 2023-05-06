@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="grid-container"
+<body class="grid-container" id="bodySection"
     style="background-image: url(<?php echo base_url('public/img/' . $site . '/template/bcg_template.jpg'); ?>);">
     <!-- video background -->
     <?php
@@ -140,7 +140,7 @@
         </div>
     </div>
     <div class="content">
-        <div class="framezone">
+        <div class="framezone" id="framezone">
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper bg-transparent">
                 <!-- Content Header (Page header) -->
@@ -157,7 +157,7 @@
                     </div>
                 </section>
                 <!-- Main content  -->
-                <section class="content">
+                <section class="content" id="contentSection">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
@@ -170,7 +170,7 @@
                 <!--  /.content  -->
             </div>
             <!-- /.content-wrapper -->
-        </div>
+        </div>        
         <div class="navigation">
             <h6 hidden>nav</h6>
         </div>
@@ -211,6 +211,8 @@
     <script src="<?php echo base_url('public/assets/tour/js/bootstrap-tour.min.js'); ?>"></script>
     <!-- Bootstrap tour logic -->
     <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>"></script>
+    <!-- fullscreen library -->
+    <script src="<?php echo base_url('public/assets/fullscreen/js/fullScreen.js'); ?>"></script>
 
     <script>
         function openNav() {
@@ -245,8 +247,25 @@
         //var element = document.querySelector("body");
         //element.requestFullscreen();
         document.getElementById("soundDivision").clic
+        /*var btnFullScreen = document.getElementById("btnFullScreen");
+        btnFullScreen.addEventListener("click", () => {
+            if(document.fullscreenElement) {
+                document.exitFullscreen();                
+            } else {
+                document.documentElement.requestFullscreen();                
+            }
+        });*/
 
-$(window).on('load', function () {
+        var links = document.querySelectorAll("a");
+        for(const link of links) {
+            links.addEventListener(click,() => {
+                if (document.exitFullscreen) {
+                    document.documentElement.requestFullscreen();
+                }
+            });
+        }
+
+    $(window).on('load', function () {
             $('#tourVideo').modal('show');
         })
     </script>
