@@ -35,7 +35,8 @@ class UserModel extends Model
         'lastip',
         'picture',
         'url',
-        'timecreated'
+        'timecreated',
+        'tourvisits'
     ];
     
     protected $useTimestamps = false;
@@ -53,6 +54,14 @@ class UserModel extends Model
     public function getUserData($userId) {
         $db = \config\Database::connect();
         $builder = $db->table($this->table);
+        $builder->where('id', $_SESSION['user_id']);
+        return $builder->get()->getResultArray();       
+    }
+
+    public function getTourVisits($userId){
+        $db = \config\Database::connect();
+        $builder = $db->table($this->table);
+        $builder->select('tourvisits');
         $builder->where('id', $_SESSION['user_id']);
         return $builder->get()->getResultArray();       
     }

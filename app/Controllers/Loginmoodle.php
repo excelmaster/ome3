@@ -3,8 +3,8 @@ namespace App\Controllers;
 use App\Models\MdlsessionModel;
 
 class Loginmoodle extends \IonAuth\Controllers\Auth {
-    public function index (){
-        
+    
+    public function index (){      
         if(!$this->ionAuth->loggedIn()){            
             //redirect then to the login page
             return view('auth/');
@@ -12,10 +12,9 @@ class Loginmoodle extends \IonAuth\Controllers\Auth {
             echo 'desde loginmoodle';
             if($_SESSION['numberOfSessions'] > 0){
                 return view('hub');
-            } else {
+            } else {                
                 return view('loginmoodle');
-            }
-            
+            }            
         }        
     }
     
