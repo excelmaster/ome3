@@ -18,7 +18,7 @@ $('[class*="img-mundos"]').mouseover(function(e){
     contentAudio.volume = 0.2
     contentAudio.play()    
 })
-
+ 
 $('[class*="img-mundos"]').mouseleave(function(e){
     //instance element
     contentAudio.pause() 
