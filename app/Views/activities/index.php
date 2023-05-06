@@ -37,8 +37,8 @@ $this->section('content');
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-2">
-                    <div class="card text-blue bg-transparent activity-card">
+                <div class="col-sm-2 lesson-card">
+                    <div class="text-blue bg-transparent lesson-content">
                         <p class="text-center h5">Actividad <?php echo $c['activityNumber']; ?></p>
                         <img class="card-img-top bg-transparent" src="holder.js/100px180/" alt="">
                         <form action="contenido.html" method="post"></form>
