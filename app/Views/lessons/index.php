@@ -28,12 +28,12 @@ $this->section('content');
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-2 lesson-card">                   
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 lesson-card">                   
                     <div class="lesson-content"> 
-                        <p class="ome-title h5"><?php echo $c['descripcion'] ?></p>                      
-                        <a type="button" href="<?php echo base_url('activities/' . $site . '/' . $c['id'] . '/' . $course . '/' . $c['lesson_number'] . '/' . $courseId); ?>">
+                        <div><p class="ome-title h5"><?php echo $c['descripcion'] ?></p></div>
+                        <div><a type="button" href="<?php echo base_url('activities/' . $site . '/' . $c['id'] . '/' . $course . '/' . $c['lesson_number'] . '/' . $courseId); ?>">
                             <img src="<?php echo base_url('public/img/' . $site . '/lessons/' . $c['img_url']); ?>" alt="" class="img-fluid rounded">
-                        </a>
+                        </a></div>
                     </div>
                 </div>
             <?php

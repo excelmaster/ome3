@@ -33,14 +33,14 @@ $this->section('content');
         </div> -->
     </div>
     <div class="card-body bg-transparent">
-        <div class="row  content-container">
+        <div class="row content-container">
             <?php
             foreach ($lessons as $c) {
             ?>
-                <div class="col-sm-2 lesson-card">
-                    <div class="text-blue bg-transparent lesson-content">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 ">
+                    <div class="text-blue bg-transparent lesson-card">
                         <p class="text-center h5">Actividad <?php echo $c['activityNumber']; ?></p>
-                        <img class="card-img-top bg-transparent" src="holder.js/100px180/" alt="">
+                        <img class="bg-transparent" src="holder.js/100px180/" alt="">
                         <form action="contenido.html" method="post"></form>
                         <?php
                         echo '<a type="button" class="btn bg-transparent" href="' . base_url('content/' . $site . '/' . $c['objectId'] . '/' . $c['lessonId'] . '/' . $course . '/' . $lesson . '/' . $courseId . '/' . $c['tipo'] . '/' . $c['activityNumber']) .'/'.str_replace('.png','',$c['img_path']). '">';
