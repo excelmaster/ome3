@@ -5,32 +5,23 @@ $inactivos = 0;
 $this->extend('templates/template_new');
 $this->section('content');
 $colvideo = array(
-  'a' => 4,
-  'b' => 1,
-  'c' => 2,
-  'd' => 1,
+  'a' => 3,
+  'b' => 2,
+  'c' => 1,
+  'd' => 2,
   'e' => 2,
-  'f' => 1
+  'f' => 3
 );
 ?>
 
 <!-- Default box -->
 <div class="card bg-transparent">
   <div class="card-header">
-    <div class="row">
+    <div class="row content-card">
       <div class="col-md-<?php echo $colvideo['a'] ?>">
         <img class="img-fluid" src="<?php echo base_url('public/img/' . $site . '/template/bienvenidos_' . $course . '.png'); ?>" alt="" >
-      </div>
-      <!-- <div class="col-md-<?php echo $colvideo['b'] ?>">
-        <?php
-        if ($source == 'video') {
-          echo '<a href="#"><img class="bg-gradient-white" src="' . base_url('public/img/' . $site . '/content/videos.gif') . '"></a>';
-        } else {
-          echo '<img></img>';
-        };
-        ?>
-      </div> -->
-      <div class="col-md-<?php echo $colvideo['c'] ?>" <?php if ($activity == '1') echo 'hidden'; ?>>
+      </div>       
+      <div class="col-md-<?php echo $colvideo['b'] ?>" <?php if ($activity == '1') echo 'hidden'; ?>>
         <button type="button" class="btn text-blue bg-transparent">
           <h6>Previous<br> Activity</h6>
           <a class="button float-none bg-transparent" style="width: 100px;" href="<?php $retVal = ($url_prev == '0') ? '#' : $url_prev;
@@ -39,17 +30,25 @@ $colvideo = array(
           </a>
         </button>
       </div>
+      <div class="col-md-<?php echo $colvideo['c'] ?>">
+        <?php
+        /*if ($source == 'video') {
+          echo '<a href="#"><img class="bg-gradient-white" src="' . base_url('public/img/' . $site . '/content/videos.gif') . '"></a>';
+        } else {
+          echo '<img></img>';
+        };*/
+        ?>
+      </div>
       <div class="col-md-<?php echo $colvideo['d'] ?>" <?php if ($url_next == '0') echo 'hidden'; ?>>
         <button type="button" class="btn text-blue bg-transparent">
           <h6>Next <br>Activity</h6>
           <a class="button float-none bg-transparent" style="width: 100px;" href="<?php echo $url_next; ?>">
             <img src="<?php echo base_url('public/img/' . $site . '/template/flecha_next.png'); ?>" id="actv_next" class="btn-sonido" style="width: 70px; height: 70px;  ">
           </a>
-        </button>
-        <br><br>
+        </button>        
       </div>
       <div class="col-md-<?php echo $colvideo['e'] ?>">
-        <div class="col-sm-10 direct-chat-text bg-blue"><?php echo 'Lección ' . $lesson . ' - Actividad ' . $activity . ':: ' . $source; ?></div>
+        <p class="col-sm-10 direct-chat-text bg-blue h6"><?php echo 'Lección ' . $lesson . ' - Actividad ' . $activity . ':: ' . $source; ?></p>
       </div>
       <div class="col-md-<?php echo $colvideo['f'] ?>">
         <a href="<?php echo base_url('activities/' . $site . '/' . $lessonId . '/' . $course . '/' . $lesson . '/' . $courseId); ?>"><img style="height: 700;width: 580" src="<?php echo base_url('public/img/' . $site . '/content/back_activities.png'); ?>"></a>
