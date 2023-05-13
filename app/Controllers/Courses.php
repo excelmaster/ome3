@@ -23,11 +23,12 @@ class Courses extends BaseController
 				'tourvisit' => '99',
 			);
 			$userId =  $_SESSION['user_id'];
-			$userInfo = new userModel($db);
+			$userInfo = new UserModel($db);
 			$tourVisits = $userInfo->getTourVisits($userId);
+			echo $tourVisits;
 			$userId = $_SESSION['user_id'];
 			$this->session->set('tourVisits', $tourVisits[0]['tourvisits']);
-			return view('courses/index',$courses);
+			//return view('courses/index',$courses);
 		} else { 
 			$this->session->setFlashdata('message', 'No se encuentra logueado en el sistema');
 			return redirect()->to('/auth/login');
