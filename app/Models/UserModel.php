@@ -66,6 +66,10 @@ class UserModel extends Model
         return $builder->get()->getResultArray();       
     }
 
-    
+    public function setUserTourVisit($userId, $counter){
+        $db = \config\Database::connect();
+        $builder = $db->table($this->table);        
+        $builder->set('tourvisits', $counter +1)->where('id', $userId)->update();
+    }
 
 }

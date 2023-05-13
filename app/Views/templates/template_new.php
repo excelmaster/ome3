@@ -12,7 +12,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/fontawesome-free/css/all.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('public/assets/css/modules.css'); ?>">
@@ -170,7 +170,7 @@
                 <!--  /.content  -->
             </div>
             <!-- /.content-wrapper -->
-        </div>        
+        </div>
         <div class="navigation">
             <h6 hidden>nav</h6>
         </div>
@@ -181,19 +181,16 @@
         aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-
-
+                <p id="visitTourFlag" hidden><?php echo $_SESSION['tourVisits'] ?></p>
                 <div class="modal-body">
+                    <p class="h5">Antes de empezar mira este importante video !</p>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
                     </button>
                     <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe width="1020" height="630" src="https://www.youtube.com/embed/eO_AbwpYtAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="ratio ratio-16x9">                        
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/XddolBGJqM4" title="Video introductorio Plataforma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -201,8 +198,7 @@
     <!-- jQuery -->
     <script src="<?php echo base_url('public/assets/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- Bootstrap 4 -->
-    <script src="<?php echo base_url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>">
-    </script>
+    <!-- <script src="<?php echo base_url('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script> -->
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url('public/assets/dist/js/demo.js'); ?>"></script>
     <!-- JS Sound interaction -->
@@ -212,7 +208,7 @@
     <!-- Bootstrap tour logic -->
     <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>"></script>
     <!-- fullscreen library -->
-    <script src="<?php echo base_url('public/assets/fullscreen/js/fullScreen.js'); ?>"></script>
+    <!-- <script src="<?php echo base_url('public/assets/fullscreen/js/fullScreen.js'); ?>"></script> -->
 
     <script>
         function openNav() {
@@ -254,7 +250,7 @@
             } else {
                 document.documentElement.requestFullscreen();                
             }
-        });*/
+        });
 
         var links = document.querySelectorAll("a");
         for(const link of links) {
@@ -263,10 +259,19 @@
                     document.documentElement.requestFullscreen();
                 }
             });
-        }
+        }*/
 
-    $(window).on('load', function () {
-            $('#tourVideo').modal('show');
+        $(window).on('load', function () { 
+            //alert("tourvisits: " + $('#visitTourFlag').text())
+            let $counter = $('#visitTourFlag').text()
+            //alert("counter: " + $counter + "local: " + localStorage.getItem('visitTourFlag'))
+
+            if($counter <= 5 && localStorage.getItem('visitTourFlag') == '0') {   
+                $('#tourVideo').modal('show')             
+                $('#visitTourFlag').text('99')
+                localStorage.setItem('visitTourFlag','1')
+            }            
+
         })
     </script>
 

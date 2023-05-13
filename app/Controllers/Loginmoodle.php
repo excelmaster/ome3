@@ -9,10 +9,10 @@ class Loginmoodle extends \IonAuth\Controllers\Auth {
             //redirect then to the login page
             return view('auth/');
         } else {
-            echo 'desde loginmoodle';
+            //echo 'desde loginmoodle';
             if($_SESSION['numberOfSessions'] > 0){
                 return view('hub');
-            } else {                
+            } else {                                
                 return view('loginmoodle');
             }            
         }        

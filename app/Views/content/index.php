@@ -127,8 +127,7 @@ $colvideo = array(
             <p class="card-text">En esta actividad debes arrastrar las imágenes ubicadas en la izquierda hacia el campo de la derecha</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
-        </div>
-        
+        </div>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Vamos a hacelo!</button>
@@ -137,7 +136,6 @@ $colvideo = array(
     </div>
   </div>
 </div>
-
 <script>
 $(document).ready(function (){
   alert("entra");

@@ -110,4 +110,10 @@ class Users extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+
+    public function setUserTourVisit($userID, $value){
+        $model = new UserModel();
+        $result = $model->setUserTourVisit($userID, $value);
+        return $result;
+    }
 }

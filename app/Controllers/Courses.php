@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\CourseModel;
+use App\Models\UserModel;
 
 class Courses extends BaseController
 {	
@@ -9,9 +10,18 @@ class Courses extends BaseController
 	public function index( $site)
 	{
 		if($_SESSION['logged']==1){
+			// increment tourvisits field 
+			$userInstance = new UserModel($db);
+			$result = $userInstance->setUserTourVisit($_SESSION['user_id'],$_SESSION['tourVisits']);
+			echo $result;
 			$courseInstance = new CourseModel($db);
 			$courses = $courseInstance->like('idnumber',$site,'after')->orderby('mundo','ASC')->withDeleted()->findAll();
-			$courses = array('courses'=>$courses, 'courseId'=>'1', 'site' => $site);
+			$courses = array(
+				'courses'=>$courses, 
+				'courseId'=>'1', 
+				'site' => $site,
+				'tourvisit' => '99',
+			);
 			//echo $_SESSION['user_id'];
 			return view('courses/index',$courses);
 		} else { 
