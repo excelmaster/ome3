@@ -22,7 +22,7 @@ class Courses extends BaseController
 				'site' => $site,
 				'tourvisit' => '99',
 			);
-			//echo $_SESSION['user_id'];
+			$userId =  $_SESSION['user_id'];
 			$userInfo = new userModel($db);
 			$tourVisits = $userInfo->getTourVisits($userId);
 			$userId = $_SESSION['user_id'];
