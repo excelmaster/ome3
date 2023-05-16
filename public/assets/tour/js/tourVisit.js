@@ -1,8 +1,7 @@
 async function tourVisitsRegistered(){
   let tourFlag = localStorage.getItem('visitTourFlag');
   
-  if(tourFlag== 0){
-    alert('entra al flag')
+  if(tourFlag== 0){    
     let visits = await $.get(localStorage.getItem('getVisits'),
       function(data){        
         return data
