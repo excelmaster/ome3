@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controllers;
 use App\Models\MdlsessionModel;
+use App\Models\UserModel;
 
 class Loginmoodle extends \IonAuth\Controllers\Auth {
     
@@ -12,7 +13,7 @@ class Loginmoodle extends \IonAuth\Controllers\Auth {
             //echo 'desde loginmoodle';
             if($_SESSION['numberOfSessions'] > 0){
                 return view('hub');
-            } else {                                
+            } else {                                 
                 return view('loginmoodle');
             }            
         }        

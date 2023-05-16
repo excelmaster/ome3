@@ -11,9 +11,15 @@ class Courses extends BaseController
 	{
 		if($_SESSION['logged']==1){
 			// increment tourvisits field 
-			$userInstance = new UserModel($db);
-			$result = $userInstance->setUserTourVisit($_SESSION['user_id'],$_SESSION['tourVisits']);
-			echo $result;
+			/*$userInstance = new UserModel($db);
+			echo $_SESSION['tourVisits'];
+			if($_SESSION['tourVisits'] != '99'){
+				$result = $userInstance->setUserTourVisit($_SESSION['user_id'],$_SESSION['tourVisits']);
+				$this->session->set('tourVisits','99');
+				echo $result;
+			}
+			echo 'salida: '.$_SESSION['tourVisits'].'\n';
+			*/
 			$courseInstance = new CourseModel($db);
 			$courses = $courseInstance->like('idnumber',$site,'after')->orderby('mundo','ASC')->withDeleted()->findAll();
 			$courses = array(
@@ -25,10 +31,11 @@ class Courses extends BaseController
 			$userId =  $_SESSION['user_id'];
 			$userInfo = new UserModel($db);
 			$tourVisits = $userInfo->getTourVisits($userId);
-			echo $tourVisits;
+			//echo $tourVisits;
 			$userId = $_SESSION['user_id'];
 			$this->session->set('tourVisits', $tourVisits[0]['tourvisits']);
-			//return view('courses/index',$courses);
+			//echo 'salida: '.$_SESSION['tourVisits'].'\n';
+			return view('courses/index',$courses);
 		} else { 
 			$this->session->setFlashdata('message', 'No se encuentra logueado en el sistema');
 			return redirect()->to('/auth/login');

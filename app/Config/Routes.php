@@ -51,7 +51,8 @@ $routes->get('/tutorialcontent/(:any)/(:num)/(:num)/(:num)/(:num)/(:num)/(:any)/
 $routes->get('/hub', 'Hub::index');
 $routes->get('/loginmoodle', 'Loginmoodle::index');
 $routes->get('/loginmoodle/countsessions', 'Loginmoodle::countSessions');
-$routes->post('/users/setuservisit/(:number)/(:number)', 'Users::setUserTourVisit/$1/$2');
+$routes->get('/users/setuservisit', 'Users::setUserTourVisit');
+$routes->get('/users/getVisitsbyuser', 'Users::getVisitsbyuser');
 
 // IonAuth 
 $routes->group('auth', ['namespace' => 'IonAuth\Controllers'], function ($routes) {	
@@ -71,7 +72,6 @@ $routes->group('auth', ['namespace' => 'IonAuth\Controllers'], function ($routes
 });
 
 // ##### admin ######
-
 //verbs
 $routes->get('/verbs/index/(:any)', 'Verbs::index/$1');
 $routes->get('/verbs/front/(:any)', 'Verbs::front/$1');

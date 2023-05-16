@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use SebastianBergmann\CodeCoverage\Driver\Selector;
 
 class UserModel extends Model
 {
@@ -66,10 +67,17 @@ class UserModel extends Model
         return $builder->get()->getResultArray();       
     }
 
-    public function setUserTourVisit($userId, $counter){
+    public function getUserTourVisits(){
         $db = \config\Database::connect();
-        $builder = $db->table($this->table);        
-        $builder->set('tourvisits', $counter +1)->where('id', $userId)->update();
+        $builder = $db->table($this->table);
+        return $builder->select('tourvisits')->where('id', $_SESSION['user_id'])->get()->getResultArray();
+    }
+
+    public function setUserTourVisit(){        
+        $db = \config\Database::connect();
+        $builder = $db->table($this->table);                
+        $builder->set('tourvisits', $_SESSION['tourVisits']+1)->where('id', $_SESSION['user_id'])->update();          
+        return true;
     }
 
 }

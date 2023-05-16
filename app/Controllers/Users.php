@@ -111,9 +111,16 @@ class Users extends BaseController
         return redirect()->to('/');
     }
 
-    public function setUserTourVisit($userID, $value){
+    public function getVisitsbyuser(){
         $model = new UserModel();
-        $result = $model->setUserTourVisit($userID, $value);
+        $result = $model->getUserTourVisits($_SESSION['user_id']);
+        return $result[0]['tourvisits'];
+    }
+
+    public function setUserTourVisit(){
+        $model = new UserModel();       
+        $result = $model->setUserTourVisit();        
         return $result;
     }
+
 }

@@ -120,9 +120,9 @@
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div id="soundDivision" class="sb_1 d-flex justify-content-center" onclick="sonido()" data-placement="left"
+        <div id="soundDivision" class="sb_1 d-flex justify-content-center" data-placement="left"
             data-toggle="tooltip">
-            <img src="<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>" id="volume"
+            <img id="soundImg" src="<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>" 
                 class="btn-sonido" style="width: 70px; height: 70px;  ">
             <audio id="myAudio" allowfullscreen>
                 <source src="<?php echo base_url('public/sound/' . $site . '/sound_body_rdc.mp3'); ?>"
@@ -181,7 +181,7 @@
         aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-                <p id="visitTourFlag" hidden><?php echo $_SESSION['tourVisits'] ?></p>
+                <p id="userVisits" hidden><?php echo $_SESSION['tourVisits'] ?></p>
                 <div class="modal-body">
                     <p class="h5">Antes de empezar mira este importante video !</p>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
@@ -207,71 +207,20 @@
     <script src="<?php echo base_url('public/assets/tour/js/bootstrap-tour.min.js'); ?>"></script>
     <!-- Bootstrap tour logic -->
     <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>"></script>
+    <!-- Tour visits -->
+    <script src="<?php echo base_url('public/assets/tour/js/tourVisit.js'); ?>"></script>
     <!-- fullscreen library -->
     <!-- <script src="<?php echo base_url('public/assets/fullscreen/js/fullScreen.js'); ?>"></script> -->
-
+    <!-- background music  -->
+    <script src="<?php echo base_url('public/assets/sound/js/backgroundmusic.js'); ?>"></script>
     <script>
-        function openNav() {
-            document.getElementById("mySidepanel").style.width = "330px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0px";
-        }
-        var myAudio = document.getElementById("myAudio");
-        var icono = document.getElementById("volume");
-
-        function sonido() {
-            let ck = document.cookie;
-            localStorage.setItem("muted", "on");
-
-            if (localStorage.getItem("muted")) {
-                icono.setAttribute("src",
-                    "<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>");
-                myAudio.volume = .1;
-                myAudio.play();
-                myAudio.loop = false;
-                localStorage.removeItem("muted");
-            } else {
-                localStorage.setItem("muted", "on");
-                icono.setAttribute("src", "<?php echo base_url('public/img/' . $site . '/template/volume_on.png'); ?>");
-                myAudio.pause();
-            }
-        }
-
-        //
-        //var element = document.querySelector("body");
-        //element.requestFullscreen();
-        document.getElementById("soundDivision").clic
-        /*var btnFullScreen = document.getElementById("btnFullScreen");
-        btnFullScreen.addEventListener("click", () => {
-            if(document.fullscreenElement) {
-                document.exitFullscreen();                
-            } else {
-                document.documentElement.requestFullscreen();                
-            }
-        });
-
-        var links = document.querySelectorAll("a");
-        for(const link of links) {
-            links.addEventListener(click,() => {
-                if (document.exitFullscreen) {
-                    document.documentElement.requestFullscreen();
-                }
-            });
-        }*/
+        localStorage.setItem("bgMusicLogoOn", "<?php echo base_url('public/img/' . $site . '/template/volume_on.png'); ?>")    
+        localStorage.setItem("bgMusicLogoOff", "<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>")    
+        localStorage.setItem("getVisits", "<?php echo base_url('/users/getVisitsbyuser'); ?>")
+        localStorage.setItem("setVisit", "<?php echo base_url('/users/setuservisit'); ?>")
 
         $(window).on('load', function () { 
-            //alert("tourvisits: " + $('#visitTourFlag').text())
-            let $counter = $('#visitTourFlag').text()
-            //alert("counter: " + $counter + "local: " + localStorage.getItem('visitTourFlag'))
-
-            if($counter <= 5 && localStorage.getItem('visitTourFlag') == '0') {   
-                $('#tourVideo').modal('show')             
-                $('#visitTourFlag').text('99')
-                localStorage.setItem('visitTourFlag','1')
-            }            
-
+            tourVisitsRegistered()
         })
     </script>
 
