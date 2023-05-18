@@ -19,6 +19,82 @@ async function tourVisitsRegistered(){
         } catch(error) {
           console.log('error: '+error)
         }
-      }
+      } else if (localStorage.getItem('manualTutorial')=="1") {
+        $('#tourVideo').modal('show')
+      } 
   }  
 }
+
+$("#tutorialButton").click(function (e) { 
+  e.preventDefault()
+  localStorage.setItem('manualTutorial',1)
+  tourVisitsRegistered()
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,9 +18,7 @@
     <link rel="stylesheet" href="<?php echo base_url('public/assets/css/modules.css'); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?php echo base_url('public/assets/css/grid.css'); ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- bootstrapTour -->
-    <link href="bootstrap-tour.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">    
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Montserrat:wght@600&display=swap"
@@ -43,7 +41,7 @@
     <div class="header">
         <div class="container-fluid">
             <div class="d-flex bd-highlight justify-content-between align-content-center mb-3">
-                <div class="p-2 bd-highlight">
+                <div id="logoImg" class="p-2 bd-highlight">
                     <a href="<?php echo base_url('courses/' . $site); ?>">
                         <img src="<?php echo base_url('public/img/' . $site . '/template/texto_logo.png'); ?>"
                             alt="AdminLTE Logo" class="logo-header">
@@ -72,21 +70,9 @@
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <!-- <div class="mn_2">
-            <a href="<?php echo base_url('music/' . $site);  ?>">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_3.svg'); ?>"
-                    class="img-menu <?php echo $clase; ?>">
-            </a>
-        </div>
-        <div class="mn_3">
-            <a href="<?php echo base_url('verbs/front/' . $site)  ?>" data-toggle="tooltip" data-placement="left"
-                title="APRENDE ESTOS IMPORTANTES VERBOS">
-                <img src="<?php echo base_url('public/img/' . $site . '/template/menu_4.svg'); ?>"
-                    class="img-menu <?php echo $clase; ?>">
-            </a>
-        </div> -->
         <div class="mn_1">
-            <a href="<?php echo base_url('tutorial/' . $site);  ?>">
+            <a id="tutorialButton" >
+                <!-- href="<?php echo base_url('tutorial/' . $site);  ?>" -->
                 <img src="<?php echo base_url('public/img/' . $site . '/template/menu_6.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
             </a>
@@ -203,22 +189,24 @@
     <script src="<?php echo base_url('public/assets/dist/js/demo.js'); ?>"></script>
     <!-- JS Sound interaction -->
     <script src="<?php echo base_url('public/assets/sound/js/ome_sound.js'); ?>"></script>
-    <!-- Bootstrap tour -->
-    <script src="<?php echo base_url('public/assets/tour/js/bootstrap-tour.min.js'); ?>"></script>
     <!-- Bootstrap tour logic -->
-    <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>"></script>
+    <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>" type="module"></script>
     <!-- Tour visits -->
     <script src="<?php echo base_url('public/assets/tour/js/tourVisit.js'); ?>"></script>
     <!-- fullscreen library -->
     <!-- <script src="<?php echo base_url('public/assets/fullscreen/js/fullScreen.js'); ?>"></script> -->
     <!-- background music  -->
     <script src="<?php echo base_url('public/assets/sound/js/backgroundmusic.js'); ?>"></script>
+    <!-- shepherd tour -->
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/css/shepherd.css"/>
+
     <script>
         localStorage.setItem("bgMusicLogoOn", "<?php echo base_url('public/img/' . $site . '/template/volume_on.png'); ?>")    
         localStorage.setItem("bgMusicLogoOff", "<?php echo base_url('public/img/' . $site . '/template/volume_off.png'); ?>")    
         localStorage.setItem("getVisits", "<?php echo base_url('/users/getVisitsbyuser'); ?>")
         localStorage.setItem("setVisit", "<?php echo base_url('/users/setuservisit'); ?>")
-
+        localStorage.setItem("manualTutorial", 0);
         $(window).on('load', function () { 
             tourVisitsRegistered()
         })
