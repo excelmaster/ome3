@@ -170,11 +170,11 @@
                 <p id="userVisits" hidden><?php echo $_SESSION['tourVisits'] ?></p>
                 <div class="modal-body">
                     <p class="h5">Antes de empezar mira este importante video !</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                    <button id="closeModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
                     </button>
                     <!-- 16:9 aspect ratio -->
                     <div class="ratio ratio-16x9">                        
-                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/XddolBGJqM4" title="Video introductorio Plataforma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="1903" height="768" src="https://www.youtube.com/embed/ZIs8s6ZG5bs" title="VID INTRO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -190,7 +190,7 @@
     <!-- JS Sound interaction -->
     <script src="<?php echo base_url('public/assets/sound/js/ome_sound.js'); ?>"></script>
     <!-- Bootstrap tour logic -->
-    <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>" type="module"></script>
+    <!-- <script src="<?php echo base_url('public/assets/tour/js/ome_tour.js'); ?>" type="module"></script> -->
     <!-- Tour visits -->
     <script src="<?php echo base_url('public/assets/tour/js/tourVisit.js'); ?>"></script>
     <!-- fullscreen library -->
