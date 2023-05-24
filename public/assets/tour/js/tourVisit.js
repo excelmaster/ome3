@@ -7,7 +7,7 @@ async function tourVisitsRegistered(){
         return data
       })      
       
-    if(visits <= 5){     
+    if(visits <= 2){     
       console.log('ejecuta la visita')   
       try{ 
         let newVisit = await  $.get(localStorage.getItem('setVisit'),
