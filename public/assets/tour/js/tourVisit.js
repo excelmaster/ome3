@@ -21,6 +21,7 @@ async function tourVisitsRegistered(){
         console.log('error: '+error)
       }
     } else if (localStorage.getItem('manualTutorial')=="1") {
+      localStorage.setItem("manualTutorial","0")
       $('#tourVideo').modal('show')
     } 
   }  
@@ -60,7 +61,7 @@ $("#tourVideo").on('hide.bs.modal',function (e) {
       text: 'Este es el menú de recursos, aquí podras encontrar estas herramientas:',
       attachTo: {
         element: '#bodySection > div.menu',
-        on: 'bottom'
+        on: 'right'
       },
       buttons: [
         {
@@ -341,7 +342,12 @@ $("#tourVideo").on('hide.bs.modal',function (e) {
     tour.start()
 });
 
-
+//  trigger user tour from tutorial button
+$("#tutorialButton").click(function (e) { 
+  e.preventDefault();
+  localStorage.setItem("manualTutorial","1")
+  tourVisitsRegistered()
+});
 
 
 

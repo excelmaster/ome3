@@ -64,6 +64,7 @@
 					if (data == "1") {
 						console.log("ok");											
 						var ruta = window.location.origin + '/courses/' + '<?php echo $_SESSION['course']; ?>';
+						ruta = '<?php echo base_url('courses/'.$_SESSION['course']); ?>'
 						console.log('ruta: ' + ruta);						
 						$(window).attr('location',ruta );
 					} else {

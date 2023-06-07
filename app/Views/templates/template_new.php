@@ -23,7 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Montserrat:wght@600&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body class="grid-container" id="bodySection"
@@ -70,8 +69,8 @@
                     class="img-menu <?php echo $clase; ?>">
             </a>
         </div>
-        <div class="mn_1">
-            <a id="tutorialButton" >
+        <div class="mn_1" id="tutorialButton">
+            <a>
                 <!-- href="<?php echo base_url('tutorial/' . $site);  ?>" -->
                 <img src="<?php echo base_url('public/img/' . $site . '/template/menu_6.png'); ?>"
                     class="img-menu <?php echo $clase; ?>">
