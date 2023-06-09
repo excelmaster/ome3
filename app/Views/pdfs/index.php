@@ -18,7 +18,7 @@ $this->section('content');
                 <div class="col-sm-10 direct-chat-text bg-blue">EN ESTOS PDF ENCONTRARAS MULTIPLES ACTIVIDADES PARA REFORZAR TUS CONOCIMIENTOS!</div>
             </div>
             <div class="col-sm-2">
-                <a href="<?php echo base_url('courses/' . $site ); ?>"><img src="<?php echo base_url('public/img/' . $site . '/dict/back_button.png'); ?>"></a>
+                <a href="<?php echo base_url('courses/' . $site ); ?>"><img src="<?php echo base_url('public/img/' . $site . '/pdf/back_button.png'); ?>"></a>
             </div> 
         </div>
         <!-- <div class="card-tools">
