@@ -35,7 +35,7 @@ $this->section('content');
             foreach ($dicts as $d) {
             ?>
                 <div class="col-md-2">
-                    <div class="card text-white bg-yellow mb-4">
+                    <div class="card text-black bg-yellow mb-4">
                         <h5 class="text-center"> <?php echo strtoupper($d['letra']); ?></h5>
                         <a href="<?php echo base_url('letter/' . $site . '/' . $d['letra']); ?>">
                             <img src="<?php echo base_url('public/img/' . $site . '/dict/' . $d['letra'] . '/letra_' . $d['letra'] . '.png'); ?>" alt="" class="img-fluid" style="width: 100%;">
